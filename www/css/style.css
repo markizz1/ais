@@ -1,0 +1,237 @@
+.container{
+   position: relative;
+   right: 0;
+   width: 100%;
+   min-height: 100vh;
+   border: none;
+   display: flex;
+   flex-direction: column;
+}
+
+body.lock{
+   background:  #124768;
+}
+
+/**Стили header**/
+.container .header{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+   height: 80px;
+   width: 100%;
+   z-index: 5000;
+}
+.header .headerBx {
+   position: relative;
+   width: 100%;
+   max-width: 1400px;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+}  
+
+.header .headerBx .logo {
+   height: 90%;
+   width: calc(250px + 150 * (100vw / 1400));
+   overflow: hidden;
+}  
+.logo a img{
+   object-fit: contain;
+   width: 100%;
+   height: 100%;
+}
+/**Стили header**/
+
+/**Стили canvas**/
+#canvasBx {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: -10;
+  background: transparent;
+ }
+ #canvasBx canvas {
+   position: absolute;
+   top: 0;
+   left: 0;
+ }
+ 
+ #canvas {
+   z-index: -2;
+ }
+ #canvasbg {
+   z-index: -3;
+   opacity: 0.5;
+ }
+
+
+/**Стили canvas**/
+
+
+
+/**Стили footer**/
+.footer{
+   position: relative;
+   height: 40px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   margin-top: auto;
+   z-index: 1000;
+   border-top: 1px solid #b2bee911;
+   background: #ececec11;
+}
+.footer .footerBx{
+   position: relative;
+   width: 100%;
+   max-width: 1400px;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+.container .footer label{
+   display: flex;
+   align-items: center;
+}
+.container .footer label .sri{
+   position: relative;
+   display: inline-flex;
+   align-items: flex-end;
+   white-space: nowrap;
+   font-size: calc(8px + 6 * (100vw / 1400));
+   letter-spacing: 0.05em;
+   font-weight: 300;
+   color:#b2bee961;
+   overflow: hidden;
+   cursor: pointer;
+}
+.container .footer label input{
+   appearance: none;
+   border: none;
+   background: none;
+   opacity: 0;
+   position: absolute;
+}
+.container .footer .sri .phone{
+   position: relative;
+   left: 100%;
+   text-decoration: underline;
+   line-height: 1.33em;
+   transition: all 0.5s ease-out 0s;
+   -moz-transition: all 0.5s ease-out 0s;
+   -o-transition: all 0.5s ease-out 0s;
+   -webkit-transition: all 0.5s ease-out 0s;
+}
+.footer .sri.icon-phone-square-alt::before{
+   position: relative;
+   left: 100%;
+   transform: translateX(-100%);
+   font-size: calc(16px + 10 * (100vw / 1400));
+   transition: all 0.5s ease-out 0s;
+   -moz-transition: all 0.5s ease-out 0s;
+   -o-transition: all 0.5s ease-out 0s;
+   -webkit-transition: all 0.5s ease-out 0s;
+}
+.container .footer label input:checked ~ .sri{
+   color:#fff;
+}
+.container .footer label input:checked ~ .sri .phone{
+   margin-left: 0.5em;
+   left: 0%;
+}
+.container .footer label input:checked ~ .sri.icon-phone-square-alt::before{
+   left: 0%;
+   transform: translateX(0%);
+}
+.footer .autor{
+   color:#b2bee961;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content:center;
+   white-space: nowrap;
+   font-size: calc(10px + 4 * (100vw / 1400));
+}
+/**Стили footer**/
+
+/**Стили main**/
+.main {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex: 1 1 auto;
+   width: 100%;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  z-index: 1000;
+  padding: 10px 0;
+}
+.main .mainBx{
+   position: relative;
+   width: 100%;
+   max-width: 1520px;
+}
+.main .mainBx .article{
+   width: 100%;
+}
+/**Стили main**/
+
+.circle{
+   position: absolute; 
+   top: -0px; 
+   right: 0px; 
+   transform: translate(25px, 15px); 
+   width: 80px; 
+   height: 70px;
+}
+
+#ellipseSvg path{
+   stroke-dasharray: 2000; 
+   stroke-dashoffset: 2000;
+   animation: stroke 3s ease-in-out 1 1.5s forwards;
+   -moz-animation: stroke 3s ease-in-out 1 1.5s forwards;
+   -webkit-animation: stroke 3s ease-in-out 1 1.5s forwards;
+   -o-animation: stroke 3s ease-in-out 1 1.5s forwards;
+}
+@keyframes stroke{
+   0%{
+      stroke-dashoffset: 2000;
+   }
+   100%{
+      stroke-dashoffset: 0;
+   }
+}
+@-moz-keyframes stroke{
+   0%{
+      stroke-dashoffset: 2000;
+   }
+   100%{
+      stroke-dashoffset: 0;
+   }
+}
+@-o-keyframes stroke{
+   0%{
+      stroke-dashoffset: 2000;
+   }
+   100%{
+      stroke-dashoffset: 0;
+   }
+}
+@-webkit-keyframes stroke{
+   0%{
+      stroke-dashoffset: 2000;
+   }
+   100%{
+      stroke-dashoffset: 0;
+   }
+}
+#ellipseSvg path.deleted{
+   display: none;
+}

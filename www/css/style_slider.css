@@ -1,0 +1,604 @@
+.article .slider {
+   position: relative;
+   min-width: 0;
+   max-width: 1400px;
+   opacity: 0;
+   visibility: hidden;
+   animation: fadeIn 0.5s ease 1 0.5s forwards;
+   counter-reset: multi-counters;
+}
+@keyframes fadeIn{
+   to{
+   opacity: 1;
+   visibility: visible;
+   }
+}
+@-moz-keyframes fadeIn{
+   to{
+   opacity: 1;
+   visibility: visible;
+   }
+}
+@-o-keyframes fadeIn{
+   to{
+   opacity: 1;
+   visibility: visible;
+   }
+}
+@-webkit-keyframes fadeIn{
+   to{
+   opacity: 1;
+   visibility: visible;
+   }
+}
+.slider .slick-list {
+   overflow: hidden;
+}
+
+.slider .slick-list .slick-track {
+   display: flex;
+   align-items: center;
+   background: transparent;
+}
+
+.slider .slide {
+   outline: none;
+   border: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 0 60px;
+}
+
+.slider .slide.row {
+   flex-direction: row;
+}
+
+.slick-arrow {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 0;
+   padding: 0;
+   appearance: none;
+   border: none;
+   outline: none;
+   width: 40px;
+   height: 90px;
+   opacity: 0.3;
+   transition: opacity 0.3s ease 0s;
+   padding: 4px;
+   margin: 10px;
+   z-index: 20;
+}
+
+.slick-arrow:hover {
+   opacity: 1;
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+   left: 0;
+   background: url(../image/arrows/left-arrow.svg) center/50% no-repeat,linear-gradient(to right, #000, transparent);
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+   right: 0;
+   background: url(../image/arrows/right-arrow.svg) center/50% no-repeat,linear-gradient(to left, #000, transparent);
+}
+
+/****************************************************************/
+.slide .imgBx.hov,
+.slide .imgBx {
+   display: flex;
+   justify-content: flex-start;
+   flex-direction: column;
+   flex: 1 1 auto;
+   max-width: 900px;
+}
+
+.slide .imgBx.hov {
+    width: auto;
+   max-width: none;
+   flex: 0 1 60%;
+   padding: 0;
+}
+
+.slide .imgBx.hov img {
+   height: auto;
+}
+.slide .imgBx.hov img,
+.slide .imgBx img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+.slide .text,
+.slide .text1{
+   display: flex;
+   color: #fff;
+   background: #fff2;
+   font-size: calc(10px + 10 * (100vw / 1400));
+   padding: 0 20px 0 20px;
+}
+.slide .text1 {
+   width: auto;
+   flex: 0 1 40%;
+   flex-direction: column;
+   justify-content: center;
+   z-index: -9;
+   opacity: 0;
+   align-self: stretch;
+   transform: translateX(-75%);
+   -o-transform: translateX(-75%);
+   -moz-transform: translateX(-75%);
+   -webkit-transform: translateX(-75%);
+   animation: slideOneText 1s linear 0s 1 normal forwards;
+   -moz-animation: slideOneText 1s linear 0s 1 normal forwards;
+   -o-animation: slideOneText 1s linear 0s 1 normal forwards;
+   -webkit-animation: slideOneText 1s linear 0s 1 normal forwards;
+}
+@keyframes slideOneText{
+   0%{
+      transform: translateX(-75%);
+   }
+   100%{
+      opacity: 1;
+      transform: translateX(0%);
+   }
+}
+@-o-keyframes slideOneText{
+   0%{
+      transform: translateX(-75%);
+   }
+   100%{
+      opacity: 1;
+      transform: translateX(0%);
+   }
+}
+@-moz-keyframes slideOneText{
+   0%{
+      transform: translateX(-75%);
+   }
+   100%{
+      opacity: 1;
+      transform: translateX(0%);
+   }
+}
+@-webkit-keyframes slideOneText{
+   0%{
+      transform: translateX(-75%);
+   }
+   100%{
+      opacity: 1;
+      transform: translateX(0%);
+   }
+}
+.slide .text {
+   bottom: 0em;
+   margin: 0 auto;
+   opacity: 0;
+   color: #fff;
+   width: 100%;
+   max-width: 900px;
+   box-sizing: border-box;
+   align-items: center;
+   justify-content: center;
+   border-top: 10px solid transparent;
+   border-bottom: 10px solid transparent;
+   transition: opacity 0.3s ease 0s;
+   -o-transition: opacity 0.3s ease 0s;
+   -moz-transition: opacity 0.3s ease 0s;
+   -webkit-transition: opacity 0.3s ease 0s;
+   z-index: -9;
+
+}
+.slick-active .text {
+   opacity: 1;
+   animation: slideOut .5s linear 0s 1 normal forwards;
+   -moz-animation: slideOut .5s linear 0s 1 normal forwards;
+   -o-animation: slideOut .5s linear 0s 1 normal forwards;
+   -webkit-animation: slideOut .5s linear 0s 1 normal forwards;
+}
+@keyframes slideOut{
+   0%{
+      transform: translateY(-100%);
+   }
+   100%{
+      transform: translateY(0%);
+   }
+}
+@-webkit-keyframes slideOut{
+   0%{
+      transform: translateY(-100%);
+   }
+   100%{
+      transform: translateY(0%);
+   }
+}
+@-moz-keyframes slideOut{
+   0%{
+      transform: translateY(-100%);
+   }
+   100%{
+      transform: translateY(0%);
+   }
+}
+@-o-keyframes slideOut{
+   0%{
+      transform: translateY(-100%);
+   }
+   100%{
+      transform: translateY(0%);
+   }
+}
+@media (max-width:767px) {
+   .slide .text,
+   .slide .text1 {
+      font-size: calc(8px + (12 + 12 * 0.7) * ((100vw - 280px) / 1400));
+      ;
+   }
+}
+.slide .text h3{
+   font-weight: normal;
+   font-style: normal;
+   text-align: center;
+}
+.slide .text1 ol li{
+   display: block;
+}
+.slide .text1 ol li:first-child ol li.icon-check::before{
+   font-size: calc(6px + 12 * (100vw / 1400));
+   margin-right: 0.5em;
+}
+.dots {
+   position: relative;
+   width: 100%;
+   margin: 10px 0 0 0;
+   z-index: 30;
+}
+
+.slick-dots {
+   position: relative;
+   max-width: 300px;
+   flex-direction: row;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   margin: 0 auto;
+}
+
+.slick-dots li {
+
+   list-style: none;
+}
+
+.slick-dots li button {
+   position: relative;
+   font-size: 0;
+   appearance: none;
+   border-radius: 50%;
+   width: 14px;
+   height: 14px;
+   appearance: none;
+   outline: none;
+   border: none;
+   background: rgb(114, 142, 170);
+   cursor: pointer;
+}
+
+.slick-dots li button:hover {
+   background: rgba(50, 60, 70, 0.5);
+}
+
+.slick-active button {
+   background: rgba(20, 30, 40, 1) !important;
+}
+
+/**Стили для слайдера инструкции под андроид**/
+.slider.android .slide.row{
+   justify-content: center;
+}
+.slider.android .slide{
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.slider.android .slide .imgBx{
+   max-width: 400px;
+}
+.slider.android .slide .imgBx.hov{
+   max-width: 900px;
+}
+.slider.android .slide .text {
+   margin: 0;
+   z-index: -9;
+   align-self: stretch;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 0 25px 0 25px;
+}
+.slider.android .slick-active .text{
+   animation: slideLeft .5s linear 0s 1 normal forwards;
+   -moz-animation: slideLeft .5s linear 0s 1 normal forwards;
+   -o-animation: slideLeft .5s linear 0s 1 normal forwards;
+   -webkit-animation: slideLeft .5s linear 0s 1 normal forwards;
+}
+@keyframes slideLeft{
+   0%{
+      transform: translateX(-50%);
+   }
+   100%{
+      transform: translateY(0%);
+   }
+}
+@-webkit-keyframes slideLeft{
+   0%{
+      transform: translateX(-50%);
+   }
+   100%{
+      transform: translateY(0%);
+   }
+}
+@-moz-keyframes slideLeft{
+   0%{
+      transform: translateX(-50%);
+   }
+   100%{
+      transform: translateY(0%);
+   }
+}
+@-o-keyframes slideLeft{
+   0%{
+      transform: translateX(-50%);
+   }
+   100%{
+      transform: translateY(0%);
+   }
+}
+/**Нумерованный список**/
+.slider.android .slide .text ol{
+   list-style: none; 
+   counter-reset: li;
+}
+.slider.android .slide .text ol li{
+   padding: 6px 0;
+
+} 
+.slider.android .slide .text ol li::before {
+   position: relative;
+   counter-increment: li;
+   content: counters(li,".") ". "; 
+}
+.slider.android .slide .text ol li:first-child ol{
+   margin-left: 1em;
+}
+.slider.android .slide .text ol .list_item::before{
+   visibility: hidden;
+}
+.slider.android .slide .text h3{
+   margin: 0.09em 0;
+   text-align: start;
+}
+.slider.android .slide .text h3::before{
+position: relative;
+counter-increment: multi-counters;
+  content: counters(multi-counters, ".") ". ";
+}
+/**Нумерованный список**/
+/**Стили для слайдера инструкции под андроид**/
+
+
+/**стили для эллемента увелич. main**/
+
+.fullWindow {
+   position: absolute;
+   display: block;
+   left: 50%;
+   top: 50%;
+   transform: translateY(-50%) translateX(-50%) scale(0);
+   width: 180px;
+   height: 180px;
+   z-index: 100;
+   opacity: 0;
+}
+
+.fullWindow.active{
+   animation-name: full;
+   -moz-animation-name: full;
+   -o-animation-name: full;
+   animation-duration: 1s;
+   -moz-animation-duration: 1s;
+   -o-animation-duration: 1s;
+   animation-timing-function: linear;
+   -moz-animation-timing-function: linear;
+   -o-animation-timing-function: linear;
+   animation-fill-mode: forwards;
+   -moz-animation-fill-mode: forwards;
+   -o-animation-fill-mode: forwards;
+   animation-iteration-count: 1;
+   -moz-animation-iteration-count: 1;
+   -o-animation-iteration-count: 1;
+}
+@-webkit-keyframes full{
+   0%{
+      opacity: 0;
+      transform: translateY(-50%) translateX(-50%) scale(0.5);
+   }
+   50%{
+      opacity: 1;
+      transform: translateY(-50%) translateX(-50%) scale(1);
+   }
+   100%{
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-50%) translateX(-50%) scale(1.3);
+   }
+}
+@-moz-keyframes full{
+    0%{
+      opacity: 0;
+      transform: translateY(-50%) translateX(-50%) scale(0.5);
+   }
+   50%{
+      opacity: 1;
+      transform: translateY(-50%) translateX(-50%) scale(1);
+   }
+   100%{
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-50%) translateX(-50%) scale(1.3);
+   }
+}
+@-o-keyframes full{
+   0%{
+      opacity: 0;
+      transform: translateY(-50%) translateX(-50%) scale(0.5);
+   }
+   50%{
+      opacity: 1;
+      transform: translateY(-50%) translateX(-50%) scale(1);
+   }
+   100%{
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-50%) translateX(-50%) scale(1.3);
+   }
+}
+@keyframes full{
+   0%{
+      opacity: 0;
+      transform: translateY(-50%) translateX(-50%) scale(0.5);
+   }
+   50%{
+      opacity: 0.5;
+      transform: translateY(-50%) translateX(-50%) scale(1);
+   }
+   100%{
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-50%) translateX(-50%) scale(1.3);
+   }
+}
+
+.fullWindow span {
+   position: absolute;
+   width: 70px;
+   height: 14px;
+   background: #fff;
+}
+
+.fullWindow span:nth-child(1) {
+   top: 0;
+   left: 0;
+}
+
+.fullWindow span:nth-child(2) {
+   top: 28px;
+   left: -28px;
+   transform: rotate(90deg);
+}
+
+.fullWindow span:nth-child(3) {
+   bottom: 28px;
+   left: -28px;
+   transform: rotate(90deg);
+}
+
+.fullWindow span:nth-child(4) {
+   bottom: 0;
+   left: 0;
+}
+
+.fullWindow span:nth-child(5) {
+   top: 0;
+   right: 0;
+}
+
+.fullWindow span:nth-child(6) {
+   top: 28px;
+   right: -28px;
+   transform: rotate(90deg);
+}
+
+.fullWindow span:nth-child(7) {
+   bottom: 28px;
+   right: -28px;
+   transform: rotate(90deg);
+
+}
+.fullWindow span:nth-child(8) {
+   bottom: 0;
+   right: 0;
+}
+.main.fullscreen{
+   position: absolute;
+   justify-content: start;
+   align-items: flex-start;
+}
+.main.fullscreen .mainBx{
+   margin: 0;
+   max-width: none;
+   margin: 0;
+}
+.main.fullscreen .article{
+   position: fixed;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to bottom right, rgb(7, 27, 20), rgba(0, 0, 0, 1));
+}
+.main.fullscreen .article .dots{
+   display: none;
+}
+.main.fullscreen .article .slick-arrow{
+   margin: 0;
+   height: 100%;
+   border-radius: 0;
+   opacity: 0;
+}
+.main.fullscreen .article .slick-arrow:hover{
+   opacity: 1;
+}
+.main.fullscreen .slick-arrow.slick-prev {
+   left: 0;
+   background: url(../image/arrows/left-arrow.svg) center/50% no-repeat;
+}
+.main.fullscreen .slick-arrow.slick-next {
+   right: 0;
+   background: url(../image/arrows/right-arrow.svg) center/50% no-repeat;
+}
+.main.fullscreen .article .slider {
+   height: 100%;
+   max-width: none;
+   margin: 0 auto;
+}
+.main.fullscreen .article .slider .slide{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+}
+.main.fullscreen .article .imgBx{
+   height: 100%;
+   width: 100%;
+   max-width: none;
+   padding: 0;
+}
+.main.fullscreen .article .imgBx.hov{
+   max-width: 1400px;
+}
+.main.fullscreen .article .text,
+.main.fullscreen .article .text1{
+   display: none;
+}
+.main.fullscreen .article .imgBx.hov,
+.main.fullscreen .article .imgBx{
+   align-self: auto;
+   flex: 0 1 auto;
+}

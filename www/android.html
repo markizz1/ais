@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="mobile-web-app-capable" content="yes">
+   <meta name="HandheldFriendly" content="true" />
+   <meta name="description" content="удаленный доступ к почте с мобильный устройств" />
+   <meta name="keywords" content="" />
+   <meta name="robots" content="noindex,nofollow" />
+   <title>ООО "ТатАИСнефть"</title>
+   <link rel="icon" type="image/png" href="image/logo/favicon.png" />
+   <link rel="stylesheet" href="css/style_default.css" />
+   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/style_nav.css" />
+   <link rel="stylesheet" href="css/style_slider.css" />
+   <link rel="stylesheet" href="css/iconfont.css" />
+   <link rel="stylesheet" media="(max-width:767px)" href="css/style_mxw767.css" />
+   <script src="app/jquery-3.5.1.min.js"></script>
+   <script src="app/slick.min.js"></script>
+   <script src="app/script.js"></script>
+</head>
+
+<body>
+   <div id="canvasBx">
+      <canvas style="opacity: 0.1;" id="canvas" width="1950px" height="1200px"></canvas>
+      <canvas style="opacity: 0.1;" id="canvasbg" width="1950px" height="1200px"></canvas>
+   </div>
+   <section class=" container">
+      <header class="header">
+         <div class="headerBx">
+            <div class="logo">
+               <a style="height: 0; font-size: 0;" href="index.html">
+                  <img src="image/logo/logo2.png" alt="rebut" />
+               </a>
+            </div>
+            <nav class="menu">
+               <div class="burg"><span></span><span></span></div>
+               <ul class="list one">
+
+                  <li class="list-mail lvl1">
+                     <div class="title mail">Настройка почты для мобильных устройств на базе ios или android</div>
+                     <span>Подключение MS outlook</span>
+                     <ul class="list-lvl2">
+                        <li class="arr ios">
+                           <a id="link" class="a" href="ios.html">ios</a>
+                        </li>
+                        <li class="arr android">
+                           <a id="link" class="a" href="android.html">android</a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li class="list-citrix lvl1">
+                     <div class="title citrix">Настройка системы citrix для удаленного подключения к программам
+                        SAP-R3, Татнефть-Нефтедобыча, 1C и т.д...</div>
+                     <a id="link" class="a " href="#0">Установка Citrix
+                     </a>
+                  </li>
+
+                  <li class="list-vpn lvl1">
+                     <div class="title vpn">Настройка VPN тунеля для работы с программами вне корпоративной сети ПАО
+                        Татнефть на операционной системе windows 7 или windows 10</div>
+                     <span>Настройка
+                        VPN</span>
+                     <ul class="list-lvl2">
+                        <li class="arr win7">
+                           <a id="link" class="a" href="#0">windows 7</a>
+                        </li>
+                        <li class="arr win10">
+                           <div class="title win10"></div>
+                           <a id="link" class="a" href="#0">windows 10</a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <div class="overlay"></div>
+      <main class="main">
+         <div class="mainBx">
+            <article id="article" class="article">
+               <section id="slider" class="slider android">
+                  <div class="slide row">
+                     <div class="imgBx hov">
+                        <img src="image/image_android/android_password.jpg">
+                     </div>
+                     <div class="text1">
+                        <ol>
+                           <li class="list_item">
+                              <h3>Общие параметры:</h3>
+                              <ol>
+                                 <li class="icon-check">Сервер: <strong>email.tatneft.ru;</strong></li>
+                                 <li class="icon-check">Логин: <strong>домен\имя пользователя;</strong>
+                                 </li>
+                                 <li class="icon-check">Например: <strong>jamash\ivanovii;</strong></li>
+                                 <li class="icon-check">Пароль:
+                                    <strong>пароль от
+                                       учетной записи </strong><span>(совпадает со входом в систему)</span></li>
+                              </ol>
+                           </li>
+                        </ol>
+                     </div>
+                  </div>
+
+                  <div class="slide">
+                     <div class="imgBx">
+                        <img src="image/image_android/android_first.jpg" />
+                     </div>
+                     <div class="text one">
+                        <ol>
+                           <li class="list_item">
+                              <h3>Открываем приложение Почта</h3>
+                              <!- ->
+                                 <ol>
+                                    <li>нажимаем кнопку Меню/Настройки</li>
+                                    <!-1.1.->
+                                       <li>нажимаем плюс в верхнем углу (добавляем учетную запись)</li>
+                                       <!-1.2.->
+                                          <li>Заполняем поля как на скриншоте (можно заполнить произвольными данными
+                                             до
+                                             активации кнопки Ручная настройка).</li>
+                                          <!-1.3.->
+                                             <li>Нажимаем кнопку Ручная настройка.</li>
+                                             <!-1.4.->
+                                 </ol>
+                           </li>
+
+                        </ol>
+                     </div>
+                  </div>
+
+                  <div class="slide">
+                     <div class="imgBx">
+
+                        <img data-lazy="image/image_android/android_second.jpg" />
+                     </div>
+                     <div class="text too">
+                        <h3>Выбираем Microsoft Exchange ActiveSync.</h3>
+                     </div>
+                  </div>
+
+                  <div class="slide">
+                     <div class="imgBx">
+
+                        <img data-lazy="image/image_android/android_third.jpg" />
+                     </div>
+                     <div class="text three">
+                        <h3>Заполняем поля(Галки должны стоять как указано на скриншоте(SSL/TLS)).</h3>
+                        <h3>Нажимаем Далее.</h3>
+                     </div>
+                  </div>
+
+                  <div class="slide">
+                     <div class="imgBx">
+                        <img data-lazy="image/image_android/android_fourth.jpg" />
+                     </div>
+                     <div class="text four">
+                        <h3>При выдаче окна “Предупреждение системы безопасности”. Нажимаем Продолжить/нажимаем Да.
+                        </h3>
+                     </div>
+                  </div>
+
+                  <div class="slide">
+                     <div class="imgBx">
+
+                        <img data-lazy="image/image_android/android_fifth.jpg" />
+                     </div>
+                     <div class="text five">
+                        <h3>Если авторизация прошла успешно появится окно “Удаленное администрирование безопасности”/
+                           Нажимаем Да.</h3>
+                     </div>
+                  </div>
+
+                  <div class="slide">
+                     <div class="imgBx">
+
+                        <img data-lazy="image/image_android/android_sixth.jpg" />
+                     </div>
+                     <div class="text six">
+                        <h3>Возможно появится окно. В нем нажимаем Включить.</h3>
+                     </div>
+                  </div>
+
+                  <div class="slide">
+                     <div class="imgBx">
+
+                        <img data-lazy="image/image_android/android_seventh.jpg" />
+                     </div>
+                     <div class="text seven">
+                        <h3>Дальше настраиваем параметры учетной записи.</h3>
+                     </div>
+                  </div>
+
+                  <div class="slide">
+                     <div class="imgBx">
+                        <img data-lazy="image/image_android/android_eighth.jpg" />
+                     </div>
+                     <div class="text eighth">
+                        <h3>На последнем этапе присваивается имя данной учетной записи (произвольное).
+                        </h3>
+                        <h3>Последнее готово.</h3>
+                     </div>
+
+                  </div>
+               </section>
+               <div class="dots"></div>
+               <div class="fullWindow">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+            </article>
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="footerBx">
+            <div class="autor">
+               © 1973–2020 ООО «ТатАИСнефть»
+            </div>
+            <label>
+               <input type="checkbox" />
+               <div class="sri icon-phone-square-alt">
+                  <span class="phone"><i
+                        style="font-style: normal; text-decoration: underline;">8(8553)30-08-72</i></span>
+               </div>
+            </label>
+         </div>
+      </footer>
+   </section>
+</body>
+
+</html>

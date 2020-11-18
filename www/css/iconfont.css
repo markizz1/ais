@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'phone';
+  src:  url('../fonts/iconfont/phone.eot?pe4ybk');
+  src:  url('../fonts/iconfont/phone.eot?pe4ybk#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont/phone.ttf?pe4ybk') format('truetype'),
+    url('../fonts/iconfont/phone.woff?pe4ybk') format('woff'),
+    url('../fonts/iconfont/phone.svg?pe4ybk#phone') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'check-tick';
+  src:  url('../fonts/iconfont/check-tick.eot?jgi647');
+  src:  url('../fonts/iconfont/check-tick.eot?jgi647#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont/check-tick.ttf?jgi647') format('truetype'),
+    url('../fonts/iconfont/check-tick.woff?jgi647') format('woff'),
+    url('../fonts/iconfont/check-tick.svg?jgi647#check-tick') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'question-circle';
+  src:  url('../fonts/iconfont/question-circle.eot?y718fi');
+  src:  url('../fonts/iconfont/question-circle.eot?y718fi#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont/question-circle.ttf?y718fi') format('truetype'),
+    url('../fonts/iconfont/question-circle.woff?y718fi') format('woff'),
+    url('../fonts/iconfont/question-circle.svg?y718fi#question-circle') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=" icon-"]::before, [class*=" icon-"]::before{
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-phone-square-alt::before {
+  font-family: 'phone' !important;
+  content: "\e900";
+}
+.icon-check::before {
+  font-family: 'check-tick' !important;
+  position: relative;
+  content: "\e901";
+}
+.icon-question-circle::before {
+  font-family: 'question-circle' !important;
+  content: "\e902";
+}
