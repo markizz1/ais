@@ -90,6 +90,7 @@ $(document).ready(function () {
                {
                   breakpoint: 768,
                   settings: {
+                     arrows: false,
                      vertical: true,
                      verticalSwiping: true,
                   }
@@ -135,6 +136,7 @@ $(document).ready(function () {
          {
             breakpoint: 768,
             settings: {
+               arrows: false,
                vertical: true,
                verticalSwiping: true,
             }
