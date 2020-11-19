@@ -170,3 +170,92 @@ a:hover {
    -moz-transition: all 0.3s ease 0s;
    -webkit-transition: all 0.3s ease 0s;
 }
+/**подсказки**/
+.title{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   transform: translateX(-100%) translateY(100%) scale(0);
+   transform-origin: right top;
+   -o-transform: translateX(-100%) translateY(100%) scale(0);
+   -o-transform-origin: right top;
+   -moz-transform: translateX(-100%) translateY(100%) scale(0);
+   -moz-transform-origin: right top;
+   -webkit-transform: translateX(-100%) translateY(100%) scale(0);
+   -webkit-transform-origin: right top;
+   padding: 10px;
+   background: #111;
+   color: #eee;
+   letter-spacing: 0.05em;
+   border-radius: 6px;
+   min-width: 200px;
+   max-width: 400px;
+   transition: transform 0.2s ease 0s;
+   -o-transition: transform 0.2s ease 0s;
+   -moz-transition: transform 0.2s ease 0s;
+   -webkit-transition: transform 0.2s ease 0s;
+   }
+   .title::after{
+      border-left: 30px solid #111;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      top: -8px;
+      right: -8px;
+      transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      z-index: -10;
+   }
+   .title span{
+   z-index: 10;
+   }
+   .title.active{
+      transform: translateX(-100%) translateY(100%) scale(1);
+      -o-transform: translateX(-100%) translateY(100%) scale(1);
+      -moz-transform: translateX(-100%) translateY(100%) scale(1);
+      -webkit-transform: translateX(-100%) translateY(100%) scale(1);
+   }
+   .lvl1.active .title.active{
+   display: none;
+   }
+   .lvl1.active .holder.active{
+      opacity: 0.3;
+   }
+   .menu .list .list-mail .holder,
+   .menu .list .list-citrix .holder,
+   .menu .list .list-vpn .holder{
+   display: none;
+   }
+   .footerBx .title{
+      min-width: 100px;
+      max-width: 200px;
+      top: 0;
+      bottom: auto;
+      left: -25px;
+      transform: translateX(-100%) translateY(-100%) scale(0);
+      -o-transform: translateX(-100%) translateY(-100%) scale(0);
+      -moz-transform: translateX(-100%) translateY(-100%) scale(0);
+      -webkit-transform: translateX(-100%) translateY(-100%) scale(0);
+      transform-origin: right bottom;
+      -o-transform-origin: right bottom;
+      -moz-transform-origin: right bottom;
+      -webkit-transform-origin: right bottom;
+   }
+   .footerBx .title.active{
+      transform: translateX(-100%) translateY(-100%) scale(1);
+      -o-transform: translateX(-100%) translateY(-100%) scale(1);
+      -moz-transform: translateX(-100%) translateY(-100%) scale(1);
+      -webkit-transform: translateX(-100%) translateY(-100%) scale(1);
+   }
+   .footerBx .title::after{
+      top: auto;
+      right: -8px;
+      bottom: -8px;
+      transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      z-index: -10;
+   }
+   /**подсказки**/

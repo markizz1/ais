@@ -85,6 +85,7 @@ $(document).ready(function () {
             slidesToScroll: 1,
             appendDots: $('.dots'),
             adaptiveHeight: false,
+            lazyLoad: 'ondemand',
             responsive: [
                {
                   breakpoint: 768,
@@ -129,6 +130,7 @@ $(document).ready(function () {
       slidesToScroll: 1,
       appendDots: $('.dots'),
       adaptiveHeight: false,
+      lazyLoad: 'ondemand',
       responsive: [
          {
             breakpoint: 768,
@@ -159,6 +161,9 @@ $(document).ready(function () {
          $(this).removeClass('opacity');
          $(this).children('.title').toggleClass('active');
          $(".list .lvl1").not($(this)).toggleClass('opacity');
+      });
+      $(".footer .footerBx label .icon-phone-square-alt").hover(function () {
+         $('.footer .footerBx label').children('.title').toggleClass('active');
       });
    }
 

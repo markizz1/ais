@@ -67,14 +67,12 @@
    outline: none;
    width: 40px;
    height: 90px;
-   opacity: 0.3;
+   opacity: 0.1;
    transition: opacity 0.3s ease 0s;
-   padding: 4px;
-   margin: 10px;
    z-index: 20;
 }
 
-.slick-arrow:hover {
+#article .slick-arrow:hover {
    opacity: 1;
 }
 
@@ -130,57 +128,11 @@
    flex-direction: column;
    justify-content: center;
    z-index: -9;
-   opacity: 0;
    align-self: stretch;
-   transform: translateX(-75%);
-   -o-transform: translateX(-75%);
-   -moz-transform: translateX(-75%);
-   -webkit-transform: translateX(-75%);
-   animation: slideOneText 1s linear 0s 1 normal forwards;
-   -moz-animation: slideOneText 1s linear 0s 1 normal forwards;
-   -o-animation: slideOneText 1s linear 0s 1 normal forwards;
-   -webkit-animation: slideOneText 1s linear 0s 1 normal forwards;
-}
-@keyframes slideOneText{
-   0%{
-      transform: translateX(-75%);
-   }
-   100%{
-      opacity: 1;
-      transform: translateX(0%);
-   }
-}
-@-o-keyframes slideOneText{
-   0%{
-      transform: translateX(-75%);
-   }
-   100%{
-      opacity: 1;
-      transform: translateX(0%);
-   }
-}
-@-moz-keyframes slideOneText{
-   0%{
-      transform: translateX(-75%);
-   }
-   100%{
-      opacity: 1;
-      transform: translateX(0%);
-   }
-}
-@-webkit-keyframes slideOneText{
-   0%{
-      transform: translateX(-75%);
-   }
-   100%{
-      opacity: 1;
-      transform: translateX(0%);
-   }
 }
 .slide .text {
    bottom: 0em;
    margin: 0 auto;
-   opacity: 0;
    color: #fff;
    width: 100%;
    max-width: 900px;
@@ -189,52 +141,9 @@
    justify-content: center;
    border-top: 10px solid transparent;
    border-bottom: 10px solid transparent;
-   transition: opacity 0.3s ease 0s;
-   -o-transition: opacity 0.3s ease 0s;
-   -moz-transition: opacity 0.3s ease 0s;
-   -webkit-transition: opacity 0.3s ease 0s;
    z-index: -9;
+}
 
-}
-.slick-active .text {
-   opacity: 1;
-   animation: slideOut .5s linear 0s 1 normal forwards;
-   -moz-animation: slideOut .5s linear 0s 1 normal forwards;
-   -o-animation: slideOut .5s linear 0s 1 normal forwards;
-   -webkit-animation: slideOut .5s linear 0s 1 normal forwards;
-}
-@keyframes slideOut{
-   0%{
-      transform: translateY(-100%);
-   }
-   100%{
-      transform: translateY(0%);
-   }
-}
-@-webkit-keyframes slideOut{
-   0%{
-      transform: translateY(-100%);
-   }
-   100%{
-      transform: translateY(0%);
-   }
-}
-@-moz-keyframes slideOut{
-   0%{
-      transform: translateY(-100%);
-   }
-   100%{
-      transform: translateY(0%);
-   }
-}
-@-o-keyframes slideOut{
-   0%{
-      transform: translateY(-100%);
-   }
-   100%{
-      transform: translateY(0%);
-   }
-}
 @media (max-width:767px) {
    .slide .text,
    .slide .text1 {
@@ -257,7 +166,6 @@
 .dots {
    position: relative;
    width: 100%;
-   margin: 10px 0 0 0;
    z-index: 30;
 }
 
@@ -299,9 +207,6 @@
 }
 
 /**Стили для слайдера инструкции под андроид**/
-.slider.android .slide.row{
-   justify-content: center;
-}
 .slider.android .slide{
    flex-direction: row;
    justify-content: center;
@@ -321,44 +226,6 @@
    flex-direction: column;
    align-items: flex-start;
    padding: 0 25px 0 25px;
-}
-.slider.android .slick-active .text{
-   animation: slideLeft .5s linear 0s 1 normal forwards;
-   -moz-animation: slideLeft .5s linear 0s 1 normal forwards;
-   -o-animation: slideLeft .5s linear 0s 1 normal forwards;
-   -webkit-animation: slideLeft .5s linear 0s 1 normal forwards;
-}
-@keyframes slideLeft{
-   0%{
-      transform: translateX(-50%);
-   }
-   100%{
-      transform: translateY(0%);
-   }
-}
-@-webkit-keyframes slideLeft{
-   0%{
-      transform: translateX(-50%);
-   }
-   100%{
-      transform: translateY(0%);
-   }
-}
-@-moz-keyframes slideLeft{
-   0%{
-      transform: translateX(-50%);
-   }
-   100%{
-      transform: translateY(0%);
-   }
-}
-@-o-keyframes slideLeft{
-   0%{
-      transform: translateX(-50%);
-   }
-   100%{
-      transform: translateY(0%);
-   }
 }
 /**Нумерованный список**/
 .slider.android .slide .text ol{
@@ -589,9 +456,6 @@ counter-increment: multi-counters;
    width: 100%;
    max-width: none;
    padding: 0;
-}
-.main.fullscreen .article .imgBx.hov{
-   max-width: 1400px;
 }
 .main.fullscreen .article .text,
 .main.fullscreen .article .text1{

@@ -102,6 +102,9 @@ body.lock{
    display: flex;
    align-items: center;
 }
+.container .footer label:hover .title{
+
+}
 .container .footer label .sri{
    position: absolute;
    right: 0;
