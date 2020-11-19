@@ -35,6 +35,7 @@ body.lock{
    height: 90%;
    width: calc(250px + 150 * (100vw / 1400));
    overflow: hidden;
+   margin: 0 0 0 -10px;
 }  
 .logo a img{
    object-fit: contain;
@@ -58,6 +59,8 @@ body.lock{
    position: absolute;
    top: 0;
    left: 0;
+   width:1950px; 
+   height:1200px;
  }
  
  #canvas {
@@ -84,6 +87,7 @@ body.lock{
    z-index: 1000;
    border-top: 1px solid #b2bee911;
    background: #ececec11;
+   font-size: 12px;
 }
 .footer .footerBx{
    position: relative;
@@ -94,21 +98,45 @@ body.lock{
    justify-content: space-between;
 }
 .container .footer label{
+   position: relative;
    display: flex;
    align-items: center;
 }
 .container .footer label .sri{
-   position: relative;
-   display: inline-flex;
-   align-items: flex-end;
+   position: absolute;
+   right: 0;
    white-space: nowrap;
-   font-size: calc(8px + 6 * (100vw / 1400));
    letter-spacing: 0.05em;
    font-weight: 300;
-   color:#b2bee961;
+    color:#fff;
    overflow: hidden;
-   cursor: pointer;
+   transform-origin: center bottom;
+   opacity: 0;
+   visibility: hidden;
 }
+@keyframes jackInTheBox {
+   from {
+     opacity: 0;
+     visibility: hidden;
+     transform: scale(0.1) rotate(30deg);
+   }
+ 
+   50% {
+     transform: rotate(-10deg);
+   }
+ 
+   70% {
+     transform: rotate(3deg);
+   }
+ 
+   to {
+     opacity: 1;
+     visibility: visible;
+     transform: scale(1);
+   }
+ }
+ 
+ 
 .container .footer label input{
    appearance: none;
    border: none;
@@ -117,35 +145,37 @@ body.lock{
    position: absolute;
 }
 .container .footer .sri .phone{
-   position: relative;
-   left: 100%;
    text-decoration: underline;
    line-height: 1.33em;
-   transition: all 0.5s ease-out 0s;
-   -moz-transition: all 0.5s ease-out 0s;
-   -o-transition: all 0.5s ease-out 0s;
-   -webkit-transition: all 0.5s ease-out 0s;
 }
-.footer .sri.icon-phone-square-alt::before{
-   position: relative;
-   left: 100%;
+.footerBx .icon-phone-square-alt{
+   right: 0;
+   top: 0;
+   position: absolute;
+   height: 100%;
+   display: flex; 
+   align-items: center;
+}
+.footerBx .icon-phone-square-alt::before{
+   position: absolute;
+   display: block;
+   font-size: 26px;
+   transition: 0.3s;
+   -o-transition: 0.3s;
+   -moz-transition: 0.3s;
+   -webkit-transition: 0.3s;
+   cursor: pointer;
+   color:#b2bee991;
    transform: translateX(-100%);
-   font-size: calc(16px + 10 * (100vw / 1400));
-   transition: all 0.5s ease-out 0s;
-   -moz-transition: all 0.5s ease-out 0s;
-   -o-transition: all 0.5s ease-out 0s;
-   -webkit-transition: all 0.5s ease-out 0s;
 }
-.container .footer label input:checked ~ .sri{
-   color:#fff;
+.footerBx label:hover .icon-phone-square-alt::before{
+   color: #fff;
 }
-.container .footer label input:checked ~ .sri .phone{
-   margin-left: 0.5em;
-   left: 0%;
+.container .footer label input:checked ~.sri{
+   animation: jackInTheBox 0.6s ease 1 0.3s forwards;
 }
-.container .footer label input:checked ~ .sri.icon-phone-square-alt::before{
-   left: 0%;
-   transform: translateX(0%);
+.container .footer label input:checked ~ .icon-phone-square-alt::before{
+   transform: translateX(-100%) rotate(45deg) scale(0);
 }
 .footer .autor{
    color:#b2bee961;
@@ -154,7 +184,6 @@ body.lock{
    align-items: center;
    justify-content:center;
    white-space: nowrap;
-   font-size: calc(10px + 4 * (100vw / 1400));
 }
 /**Стили footer**/
 
