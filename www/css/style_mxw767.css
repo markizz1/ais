@@ -228,7 +228,7 @@ transform: translate(calc(-100% - 23px), calc(-50% - 10px));
 .dots{
    top: 50%;
    transform: translateY(-50%);
-   right: 10px;
+   right: 5px;
    position: absolute;
    width: auto;
    margin: 0;
@@ -242,7 +242,10 @@ transform: translate(calc(-100% - 23px), calc(-50% - 10px));
    height: 15px;
    border-radius: initial;
 }
-.article .slick-arrow{
+#article .slick-arrow{
+   display: none;
+}
+.main.fullscreen .article .slick-arrow{
    display: none;
 }
 .slider .slick-list .slick-track {
